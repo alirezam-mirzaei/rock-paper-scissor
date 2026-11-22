@@ -26,13 +26,9 @@ def logic(user, computer):
     if user == computer:
         print()
         print('draw!')
-    elif user == 'rock' and computer == 'scissor':
-        print()
-        print('user win!')
-    elif user == 'sccisor' and computer == 'paper':
-        print()
-        print('user win!')
-    elif user == 'paper' and computer == 'rock':
+    elif (user == 'rock' and computer == 'scissor') or \
+        (user == 'sccisor' and computer == 'paper') or \
+            (user == 'paper' and computer == 'rock'):
         print()
         print('user win!')
     else:
@@ -41,6 +37,9 @@ def logic(user, computer):
 
 # Runner
 if __name__ == '__main__':
-    logic(user(), computer())
-
-print('*'* 45)
+    answer = 'y'
+    while answer == 'y':
+        logic(user(), computer())
+        print()
+        answer = input('do you want to continue? (y/n) : ')
+        print()

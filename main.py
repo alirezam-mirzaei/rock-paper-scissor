@@ -1,10 +1,46 @@
+# Import and global variables
 import random
 
+print()
+print('welcome to Rock Paper Scissor game ^_^')
+print('*'* 45)
+
+CHOICES = ['rock', 'paper', 'scissor']
+
+# Create function to get user input
 def user():
-    pass
+    choice = input('pick your choice : ')
+    while choice not in CHOICES:
+        choice = input('pick your choice : ')
+    return choice
 
+# Create function to get computer input
 def computer():
-    pass
+    print('---------- vs ----------')
+    _computer = random.choice(CHOICES)
+    print(f"computer's choice : {_computer}")
+    return _computer
 
-def logic():
-    pass
+# Create function to game logic
+def logic(user, computer):
+    if user == computer:
+        print()
+        print('draw!')
+    elif user == 'rock' and computer == 'scissor':
+        print()
+        print('user win!')
+    elif user == 'sccisor' and computer == 'paper':
+        print()
+        print('user win!')
+    elif user == 'paper' and computer == 'rock':
+        print()
+        print('user win!')
+    else:
+        print()
+        print('computer win!')
+
+# Runner
+if __name__ == '__main__':
+    logic(user(), computer())
+
+print('*'* 45)

@@ -2,7 +2,7 @@
 import random
 
 print()
-print('welcome to Rock Paper Scissor game ^_^')
+print("welcome to Rock Paper Scissor's game ^_^")
 print('*'* 45)
 
 CHOICES = ['rock', 'paper', 'scissor']

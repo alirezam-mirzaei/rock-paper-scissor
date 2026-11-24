@@ -27,10 +27,10 @@ def logic(user, computer):
         print()
         print('draw!')
     elif (user == 'rock' and computer == 'scissor') or \
-        (user == 'sccisor' and computer == 'paper') or \
-            (user == 'paper' and computer == 'rock'):
+        (user == 'paper' and computer == 'rock') or \
+            (user == 'scissor' and computer == 'paper'):
         print()
-        print('user win!')
+        print('user win!') 
     else:
         print()
         print('computer win!')
